@@ -1,4 +1,4 @@
-package com.ex.pattern.factory.execute;
+package com.ex.pattern.execute;
 
 import com.ex.pattern.factory.FirstProduct;
 import com.ex.pattern.factory.Product;
@@ -18,12 +18,14 @@ public class FactorySingletonPattern {
 	}
 
 	public static void main(String[] args) throws Exception {
-		ProductFactorySingleton factory = ProductFactorySingleton.getInstance();
-		Product product = factory.createProduct(ProductType.ONE);
-		product.doSomething();
-		product.printSource();
+		createProduct(ProductType.ONE);
+		createProduct(ProductType.TWO);
+		createProduct(ProductType.THREE);
+	}
 
-		product = factory.createProduct(ProductType.TWO);
+	private static void createProduct(ProductType productType) throws Exception {
+		ProductFactorySingleton factory = ProductFactorySingleton.getInstance();
+		Product product = factory.createProduct(productType);
 		product.doSomething();
 		product.printSource();
 	}

@@ -1,4 +1,4 @@
-package com.ex.pattern.factory.execute;
+package com.ex.pattern.execute;
 
 import com.ex.pattern.factory.FirstProduct;
 import com.ex.pattern.factory.Product;
@@ -13,17 +13,17 @@ public class FactoryPattern {
 		factory.registerProduct(ProductType.ONE, FirstProduct.class);
 		factory.registerProduct(ProductType.TWO, SecondProduct.class);
 
-		Product product = factory.createProduct(ProductType.ONE);
+		createProduct(factory, ProductType.ONE);
+		createProduct(factory, ProductType.TWO);
+		createProduct(factory, ProductType.THREE);
+
+
+	}
+
+	private static void createProduct(ProductFactory factory, ProductType productType) throws Exception {
+		Product product = factory.createProduct(productType);
 		product.doSomething();
 		product.printSource();
-
-		product = factory.createProduct(ProductType.TWO);
-		product.doSomething();
-		product.printSource();
-
-		product = factory.createProduct(ProductType.THREE);
-		product.doSomething();
-
 	}
 
 }
