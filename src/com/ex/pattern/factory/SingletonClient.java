@@ -1,4 +1,4 @@
-package com.ex.pattern.execute;
+package com.ex.pattern.factory;
 
 import com.ex.pattern.factory.FirstProduct;
 import com.ex.pattern.factory.Product;
@@ -6,7 +6,7 @@ import com.ex.pattern.factory.ProductFactorySingleton;
 import com.ex.pattern.factory.ProductType;
 import com.ex.pattern.factory.SecondProduct;
 
-public class FactorySingletonPattern {
+public class SingletonClient {
 
 	static {
 		try {

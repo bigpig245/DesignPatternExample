@@ -1,4 +1,4 @@
-package com.ex.pattern.execute;
+package com.ex.pattern.abs.factory;
 
 import com.ex.pattern.abs.factory.AbsFactory;
 import com.ex.pattern.abs.factory.AbsProductA;
@@ -6,7 +6,7 @@ import com.ex.pattern.abs.factory.AbsProductB;
 import com.ex.pattern.abs.factory.FactoryMaker;
 import com.ex.pattern.factory.ProductType;
 
-public class AbstractFactoryPattern {
+public class Client {
 
 	public static void main(String[] args) throws Exception {
 		callFactory(ProductType.ONE);
